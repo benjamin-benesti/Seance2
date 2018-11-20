@@ -13,7 +13,7 @@ import java.util.TreeSet;
 
 public class Lecteur {
     public static Collection<Conteneur> charger(String fichier) {
-        Collection<Conteneur> lesConteneurs = new TreeSet<Conteneur>(GestionDistances.comparator);
+        TreeSet<Conteneur> lesConteneurs = new TreeSet<Conteneur>(GestionDistances.comparator);
 
         try (FileInputStream fis = new FileInputStream(fichier);
             ObjectInputStream ois = new ObjectInputStream(fis))

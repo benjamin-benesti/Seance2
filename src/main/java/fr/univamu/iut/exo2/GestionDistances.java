@@ -17,6 +17,7 @@ public class GestionDistances {
        distance.put("Barcelone",183);
        distance.put("Valence",337);
        distance.put("Malaga",599);
+       distance.put("Maroc",12);
 
     }
 
