@@ -1,14 +1,19 @@
-package fr.univamu.iut.exo1;
+package fr.univamu.iut.exo2;
 
 import fr.univamu.iut.Conteneur;
 
-import java.io.*;
+import java.io.EOFException;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Comparator;
+import java.util.TreeSet;
 
 public class Lecteur {
     public static Collection<Conteneur> charger(String fichier) {
-        Collection<Conteneur> lesConteneurs = new ArrayList<>();
+        Collection<Conteneur> lesConteneurs = new TreeSet<Conteneur>(GestionDistances.comparator);
 
         try (FileInputStream fis = new FileInputStream(fichier);
             ObjectInputStream ois = new ObjectInputStream(fis))
@@ -22,6 +27,8 @@ public class Lecteur {
             {
 
             }
+
+
 
 
 
